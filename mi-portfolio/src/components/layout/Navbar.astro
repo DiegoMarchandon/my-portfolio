@@ -1,0 +1,25 @@
+---
+import styles from './../../styles/navbar.module.css';
+
+/* código javascript dentro del frontmatter (entre ---) */
+const links = [
+    {href: "/", label: "Inicio"},
+    {href: "/proyectos", label: "Proyectos"},
+    {href: "/contacto", label: "Contacto"}
+];
+--- 
+
+<nav class={styles.navStyles}>
+    <div>
+        <h2>Diego <span class={styles.lastNameStyles}>Marchandon</span></h2>
+    </div>
+    <div>
+      <ul class={styles.ulStyles}>
+      {links.map(link => (
+          <li class={styles.liStyles}>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+  </div>
+</nav>

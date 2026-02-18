@@ -1,0 +1,20 @@
+/* forma 1) JS object. No se puede usar en archivos .css */
+/* export const theme = {
+    
+} */
+
+/* forma 2) CSS variables */
+:root{
+    --Background-Portfolio: #000000; 
+    --color-primary: #0ea5e9;
+    --radius-sm: 6px;
+}
+.btn{ 
+    background: var(--color-primary); 
+    border-radius: var(--radius-sm); 
+}
+
+.backgroundDarkMode{
+    background-color: var(--Background-Portfolio);
+    color: #ffffff
+}

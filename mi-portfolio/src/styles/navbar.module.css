@@ -1,0 +1,26 @@
+/* ejemplo de import para exportar estilos entre archivos .css::after
+
+@import './global.css';
+
+*/
+
+.navStyles{
+    /* flex-direction: column; */
+    background-color: rgb(0, 86, 86);
+    padding: 0.2rem;
+    display: flex;
+}
+
+.ulStyles{
+    display: flex;
+    /* align-items:flex-start; */
+    justify-content:space-around;
+}
+
+.liStyles{
+    display:inline;
+}
+
+.lastNameStyles{
+    color: yellow;
+}
