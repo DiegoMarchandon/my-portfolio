@@ -6,9 +6,11 @@
 
 .navStyles{
     /* flex-direction: column; */
+    position:fixed;
     background-color: rgb(0, 86, 86);
     padding: 0.2rem;
     display: flex;
+    width: 100%;
 }
 
 .ulStyles{
@@ -19,6 +21,23 @@
 
 .liStyles{
     display:inline;
+}
+
+.aStyles{
+    color:antiquewhite;
+    background-color: rgb(58, 125, 234);
+    font-weight: bold; 
+    padding: 5px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.navChild{
+    flex:1;
+}
+
+#myNameHome{
+    padding-left: 15px;    
 }
 
 .lastNameStyles{

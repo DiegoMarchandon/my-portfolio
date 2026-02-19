@@ -1,0 +1,23 @@
+
+.pStyles{
+    font-family: 'Times New Roman', Times, serif;
+    color:aqua;
+}
+
+.boxStyles{
+    width: 100%;
+    height: 500px;
+}
+
+.presentationBox{
+    background-color: #0ea5e9;
+}
+.aboutBox{
+    background-color: #1e7b90;
+}
+.projectsBox{
+    background-color: #5c82db;
+}
+.stackBox{
+    background-color: #5b0050;
+}

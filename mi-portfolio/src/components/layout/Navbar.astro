@@ -10,14 +10,14 @@ const links = [
 --- 
 
 <nav class={styles.navStyles}>
-    <div>
-        <h2>Diego <span class={styles.lastNameStyles}>Marchandon</span></h2>
+    <div class={styles.navChild}>
+        <h2 id={styles.myNameHome}>Diego <span class={styles.lastNameStyles}>Marchandon</span></h2>
     </div>
-    <div>
+    <div class={styles.navChild}>
       <ul class={styles.ulStyles}>
       {links.map(link => (
           <li class={styles.liStyles}>
-            <a href={link.href}>{link.label}</a>
+            <a class={styles.aStyles} href={link.href}>{link.label}</a>
           </li>
         ))}
       </ul>
