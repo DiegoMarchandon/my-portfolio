@@ -7,7 +7,8 @@
 .navStyles{
     /* flex-direction: column; */
     position:fixed;
-    background-color: rgb(0, 86, 86);
+    backdrop-filter: blur(8px);
+    background-color: rgba(2, 113, 0, 0.2);
     padding: 0.2rem;
     display: flex;
     width: 100%;
@@ -43,5 +44,5 @@
 }
 
 .lastNameStyles{
-    color: yellow;
+    color: rgb(233, 147, 255);
 }

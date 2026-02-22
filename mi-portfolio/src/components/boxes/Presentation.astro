@@ -1,12 +1,15 @@
 ---
 import styles from '../../styles/boxes.module.css';
+import motion from 'framer-motion';
 ---
 
 <div class={`${styles.presentationBox} ${styles.boxStyles}`}>
-    <p>Junior Full-stack & Mobile developer</p>
-    <h1 class={`${styles.MyName}`}>Diego Marchandon</h1>
-    <p>Compromiso en cada etapa del desarrollo</p>
-    <p class={`${styles.MyStatus}`}><span></span>Disponible</p>
+    <div>
+        <p class={`${styles.subText}`}>Junior Full-stack & Mobile developer</p>
+        <h1 class={`${styles.MainText}`}>Diego Marchandon</h1>
+        <p>Compromiso en cada etapa del desarrollo</p>
+    </div>
+    <p class={`${styles.subText}`}><span>🟢</span>Disponible</p>
     <p class={`${styles.introduction}`}>
         Desarrollador Web recibido en 2025, 
         realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante 
