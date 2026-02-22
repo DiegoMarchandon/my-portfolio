@@ -1,0 +1,13 @@
+<!-- página de error 500 -->
+
+---
+interface Props {
+  error: unknown;
+}
+
+const { error } = Astro.props;
+---
+
+<div>
+    {error instanceof Error ? error.message : "Error desconocido"}
+</div>

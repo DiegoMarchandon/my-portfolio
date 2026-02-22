@@ -10,8 +10,28 @@
 }
 
 .presentationBox{
-    background-color: #0ea5e9;
+    background-color: #76bddd;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10%;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.introduction{
+    /* padding-right: 20%; */
+    max-width:500px;
+
+}
+
+.MyStatus{
+    color: rgb(0, 253, 0);
+}
+
+.MyName{
+    color: black;
+}
+
 .aboutBox{
     background-color: #1e7b90;
 }
