@@ -3,6 +3,8 @@
 import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion';
 import {useEffect, useState} from 'react';
 import styles from '../../styles/reactStyles/PixelCard.module.css';
+// import LocationLogo from './logos/locationLogo';
+
 
 export default function PixelCard(){
 
@@ -33,9 +35,9 @@ export default function PixelCard(){
     };
 
 return (
-    <div className={styles.container}>
+    <div class={styles.container}>
       <motion.div
-        className={styles.card}
+        class={styles.card}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => { setIsHover(false); x.set(0); y.set(0); }}
@@ -44,25 +46,37 @@ return (
       >
 
         {/* Fondo */}
-        {/* <img src="/dni-bg.png" className={styles.bg} /> */}
+        {/* <img src="/dni-bg.png" class={styles.bg} /> */}
 
         {/* Brillo animado */}
         <motion.div
-          className={styles.shine}
+          class={styles.shine}
           animate={controls}
         />
 
         {/* Contenido */}
-        <div className={styles.content}>
-          <img
-            src="/mi-foto.jpg"
-            alt="avatar"
-            className={styles.avatar}
-          />
+        <div class={styles.content}>
+          <div class={styles.avatarContainer}>
+            <img
+              src="/mi-foto.jpg"
+              alt="avatar"
+              class={styles.avatar}
+            />
+            <h3 class={styles.title}>Diego Marchandon</h3>
+            <p class={styles.subtitle}>Full-stack & Mobile Developer</p>
+          </div>
 
-          <div className={styles.data}>
-            <h3>Diego Marchandon</h3>
-            <p>Full-stack & Mobile Developer</p>
+          <div class={styles.data}>
+            <div class={styles.logoContainer}>
+              <img class={styles.logo} src='./logos/locationLogo.png' />
+              <h5 class={styles.logoText}>Localización</h5>
+              <p>Neuquén </p>
+            </div>
+            <div class={styles.logoContainer}>
+              <img class={styles.logo} src='./logos/focusLogo.png' />
+              <h5 class={styles.logoText}>Enfocado en</h5>
+              <p>Reforzar mis conocimientos sobre automatización de procesos</p>
+            </div>
           </div>
         </div>
 

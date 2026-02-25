@@ -1,28 +1,31 @@
 ---
 import styles from '../../styles/boxes.module.css';
 import PixelCard from '../reactComponents/PixelCard';
-import Example from '../reactComponents/example';
+import FlashingLight from '../reactComponents/FlashingLight';
+import boxStyles from '../../styles/boxes/presentation.module.css';
+// import Example from '../reactComponents/example';
 ---
 
-<div class={`${styles.presentationBox} ${styles.boxStyles}`}>
-    
-    <div class={`${styles.infoContainer}`}> 
-        <div class={`${styles.textContainer}`}>
+<div class={`${boxStyles.boxContainer} ${styles.boxStyles}`}>
+
+    <div class={boxStyles.infoContainer}> 
+        <div class={boxStyles.textContainer}>
             <p class={styles.subText}>Junior Full-stack & Mobile developer</p>
             <h1 class={styles.MainText}>Diego Marchandon</h1>
-            <p>Compromiso en cada etapa del desarrollo</p>
-            <p class={styles.subText}><span>🟢</span>Disponible</p>
+            <p class={styles.sloganText}>Compromiso en cada etapa del desarrollo</p>
+            <p class={`${styles.MyStatus} ${styles.subText}`}><FlashingLight client:load /> Disponible para trabajar</p>
+            <p class={boxStyles.introduction}>
+                Desarrollador Web recibido en 2025, 
+                realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante 
+                curiosidad de conocer nuevas herramientas, lenguajes y tecnologías que, 
+                una vez implementadas, terminan culminando en proyectos totalmente integrales.
+            </p>
         </div>
-        <div class={`${styles.cardContainer}`}>
+
+        <div class={styles.cardContainer}>
             <PixelCard client:load/>
         </div>
         
     </div>
 
-    <p class={styles.introduction}>
-        Desarrollador Web recibido en 2025, 
-        realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante 
-        curiosidad de conocer nuevas herramientas, lenguajes y tecnologías que, 
-        una vez implementadas, terminan culminando en proyectos totalmente integrales.
-    </p>
 </div>
