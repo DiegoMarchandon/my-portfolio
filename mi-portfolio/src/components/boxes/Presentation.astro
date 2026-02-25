@@ -1,16 +1,25 @@
 ---
 import styles from '../../styles/boxes.module.css';
-import motion from 'framer-motion';
+import PixelCard from '../reactComponents/PixelCard';
+import Example from '../reactComponents/example';
 ---
 
 <div class={`${styles.presentationBox} ${styles.boxStyles}`}>
-    <div>
-        <p class={`${styles.subText}`}>Junior Full-stack & Mobile developer</p>
-        <h1 class={`${styles.MainText}`}>Diego Marchandon</h1>
-        <p>Compromiso en cada etapa del desarrollo</p>
+    
+    <div class={`${styles.infoContainer}`}> 
+        <div class={`${styles.textContainer}`}>
+            <p class={styles.subText}>Junior Full-stack & Mobile developer</p>
+            <h1 class={styles.MainText}>Diego Marchandon</h1>
+            <p>Compromiso en cada etapa del desarrollo</p>
+            <p class={styles.subText}><span>🟢</span>Disponible</p>
+        </div>
+        <div class={`${styles.cardContainer}`}>
+            <PixelCard client:load/>
+        </div>
+        
     </div>
-    <p class={`${styles.subText}`}><span>🟢</span>Disponible</p>
-    <p class={`${styles.introduction}`}>
+
+    <p class={styles.introduction}>
         Desarrollador Web recibido en 2025, 
         realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante 
         curiosidad de conocer nuevas herramientas, lenguajes y tecnologías que, 

@@ -6,5 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  i18n: { locales: ["es", "en", "pt-br"], defaultLocale: "en"}// idiomas soportados defaultLocale: "en", // idioma por defecto }
+  i18n: { locales: ["es", "en", "pt-br"], defaultLocale: "en"}, // idiomas soportados defaultLocale: "en", // idioma por defecto }
+  site: 'https://dieggo.dev.ar'
 });
