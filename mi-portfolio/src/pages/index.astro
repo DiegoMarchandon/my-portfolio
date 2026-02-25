@@ -1,23 +1,13 @@
 ---
 // import Welcome from '../components/Welcome.astro';
-// import Layout from '../layouts/Layout.astro';
-// import Navbar from '../components/layout/Navbar.astro';
-// import Boxes from '../components/Boxes.astro';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/layout/Navbar.astro';
+import Boxes from '../components/Boxes.astro';
 // import styles from '../styles/global.css';
 ---
 
-<!-- <Layout> -->
-	<!-- <Navbar /> -->
+<Layout>
+	<Navbar />
 	<!-- <Welcome /> -->
-	 <!-- <Boxes /> -->
-<!-- </Layout> -->
-
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Mi Portfolio</title>
-  </head>
-  <body>
-    <slot /> <!-- Aquí se inyecta el contenido -->
-  </body>
-</html>
+	 <Boxes />
+</Layout>
