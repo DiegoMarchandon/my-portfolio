@@ -10,10 +10,52 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Mi Portfolio</title>
+		<title>Diego Marchandon</title>
 	</head>
 	<body class="backgroundDarkMode">
 		<slot />
+		<script>
+			const originalTitle = document.title;
+			let timeoutId:any;
+
+			document.addEventListener("visibilitychange", () => {
+			if (document.hidden) {
+				// espera unos segundos antes de cambiar el título
+				timeoutId = setTimeout(() => {
+				document.title = "👀 No me olviden";
+				}, 5000);
+			} else {
+				// vuelve al título original cuando el usuario regresa
+				clearTimeout(timeoutId);
+				document.title = originalTitle;
+			}
+			});
+
+			// variante con rotación de mensajes: 
+
+			/* 			const messages = [
+			"👀 sigo disponible",
+			"🔥 más disponible que nunca",
+			"💡 No te olvides de nosotros",
+			"🚀 Volvé cuando quieras"
+			];
+
+			let intervalId:any = null;
+			const originalTitle = document.title;
+
+			document.addEventListener("visibilitychange", () => {
+			if (document.hidden) {
+				let i = 0;
+				intervalId = setInterval(() => {
+				document.title = messages[i % messages.length];
+				i++;
+				}, 2000);
+			} else {
+				clearInterval(intervalId);
+				document.title = originalTitle;
+			}
+			}); */
+		</script>
 	</body>
 </html>
 

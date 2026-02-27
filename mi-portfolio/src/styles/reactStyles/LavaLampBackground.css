@@ -1,0 +1,27 @@
+/* .lava-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0a0f14;
+  z-index: -1;
+} */
+
+.lava-container {
+  position: fixed;      /* ⬅️ antes estaba absolute */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;        /* ocupa siempre la ventana visible */
+  overflow: hidden;
+  background: #0a0f14;
+  z-index: -1;          /* detrás del contenido */
+  pointer-events: none; /* evita que interfiera con clicks */
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+}
