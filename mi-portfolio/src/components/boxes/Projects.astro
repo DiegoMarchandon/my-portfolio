@@ -1,54 +1,56 @@
 ---
 import styles from '../../styles/boxes.module.css';
 import boxStyles from '../../styles/boxes/projects.module.css';
+import IframeComponent from '../boxesComponent/IframeComponent';
 ---
 
 <div class={`${styles.boxStyles}`}>
     <div class={`${boxStyles.boxContainer}`}>
         
-        <div class={`${boxStyles.iframeContainer}`}>
-            <div class={`${boxStyles.titleWrapper}`}>
-                <h3>Congresistas ARG</h3>
-            </div>
-            <div class={`${boxStyles.iframeWrapper}`}>
-                <iframe
-                class={`${boxStyles.iframe}`}
-                src="https://congresistas-arg-hlfj.vercel.app/"
-                loading="lazy"
-                title="Vista previa del proyecto"
-                >
-                </iframe>
-            </div>
-            <div class={`${boxStyles.iframeInfo}`}>
-                <div class={`${boxStyles.iframeDescription}`}>
-                    <p>Plataforma que visualiza en tiempo real la 
+        <IframeComponent 
+            iframeTitle="Congreso Argentino"
+            iframeSrc="https://congresistas-arg-hlfj.vercel.app/"
+            iframeDescription="Plataforma que visualiza en tiempo real la 
                         composición y actividad de ambas cámaras del Congreso Argentino 
-                        (Diputados y Senadores)
-                    </p>
-                </div>
-                <div class={`${boxStyles.iframeTechnologies}`}>
-                    <h3>Tecnologías utilizadas</h3>
-                    <ul>
-                        <li>Next.js 16</li>
-                        <ul>
-                            <li>React 19</li>
-                            <li>Typescript</li>
-                            <li>API Routes</li>
-                        </ul>
-                        <li>TailwindCSS</li>
-                        <li>Cheerio.js (Web Scraping librería)</li>
-                        <li>APIs oficiales</li>
-                    </ul>
-                    <h3>Fuentes utilizadas</h3>
-                    <ul>
-                        <li>Senado.gob.ar - Listado y Votaciones de Senadores</li>
-                        <li>datos.hcdn.gob.ar - Listado de diputados</li>
-                        <li>votaciones.hcdn.gob.ar - Votaciones de diputados</li>
-                    </ul>
-                    <li>GNEWS API - Noticias por legislador</li>
-                </div>
-            </div>
-        </div>
+                        (Diputados y Senadores)"
+            tecnologiasUsadas={[
+                'Next.16',
+                ['React 19','Typescript','API Routes'],
+                'Tailwind CSS',
+                'Cheerio.js',
+                'APIs oficiales',
+                'Vercel (despliegue)'
+            ]}    
+            fuentesUsadas={[
+                'Senado.gob.ar - Listado y Votaciones de Senadores.',
+                'datos.hcdn.gob.ar - Listado de diputados.',
+                'votaciones.hcdn.gob.ar - Votaciones de diputados.',
+                'GNEWS API - Noticias por legislador'
+            ]}
+
+        />
+
+        <IframeComponent 
+            iframeTitle="Blog de Tatuajes Old-School"
+            iframeSrc="https://tp3laravel-1.onrender.com/"
+            iframeDescription="App de blogging PWA para realizar y gestionar posts relacionados a tatuajes y seguir e interactuar con otros usuarios.
+                        Se realizó con temática de tatuajes Tradicionales Americanos/ Old School."
+            tecnologiasUsadas={[
+                'Laravel 12.15.0',
+                ['PHP 8.2.12','Blade(templates + components)','Eloquent ORM','Controllers, Requests, Middleware'],
+                'Tailwind CSS',
+                'Vite (build tool)',
+                'Supabase',
+                'league/flysystem-aws-s3-v3 (Adaptador S3)',
+                'Render (despliegue)'
+            ]}    
+            fuentesUsadas={[
+                'Datos generados por seeders/migrations.',
+                'Archivos de usuario almacenados en Supabase Storage.',
+                'Backgrounds y Assets decorativos generados por IA (Copilot Image).',
+            ]}
+
+        />
 
     </div>
 </div>

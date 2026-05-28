@@ -26,9 +26,16 @@
 }
 
 .titleWrapper{
+    display: flex;
     margin: 5px;
     background-color: rgba(0, 24, 70, 0.541);
     grid-area: title;
+    justify-content: center;
+}
+
+.titleWrapper a{
+    text-decoration: none;
+    color: white;
 }
 
 .iframeWrapper{
