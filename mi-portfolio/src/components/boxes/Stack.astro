@@ -4,32 +4,32 @@ import boxStyles from '../../styles/boxes/stack.module.css';
 import StackComponent from '../reactComponents/StackComponent';
 ---
 
-<div class={`${boxStyles.boxContainer} ${styles.boxStyles}`}>
+<div id="stack" class={`${boxStyles.boxContainer} ${styles.boxStyles}`}>
     <h1 class={`${styles.MainText} ${styles.StackMainText}`}>Mi Stack tecnológico</h1>
     <p class={`${styles.subText} ${styles.StackSubText}`}>Herramientas con las que acostumbro trabajar y tengo conocimientos</p class={styles.subText}>
     <StackComponent
         title="Stack Principal"
         description="Inlcuye tecnologías con las que más me acostumbré a trabajar."
         technologies={[
-            "JavaScript",
-            "React",
-            "Tailwind",
+            "JavaScript/Typescript",
+            "React + Next.js",
+            "Tailwind CSS",
             "Supabase (PostgreSQL)",
-            "Vercel"
+            "Vercel/Render"
         ]}
     />
 
     <StackComponent
-        title="Frontend & UI Engineering"
+        title="Frontend & Render"
         description="Incluye todo lo que corre el cliente + frameworks de render + UI/UX."
         technologies={[
+            // "jQuery",
             "Typescript",
-            "jQuery",
-            "Bootstrap",
-            "Tailwind",
-            "React",
-            "Next",
-            "Astro"
+            "React.js",
+            "Next.js",
+            "Astro",
+            "Blade",
+            "Alpine.js"
         ]}
     />
 
@@ -37,40 +37,27 @@ import StackComponent from '../reactComponents/StackComponent';
         title="Backend, APIs & Data"
         description="incluye todo lo relacionado a la lógica del servidor, datos y APIs."
         technologies={[
-            "AJAX",
+            // "AJAX",
             "PHP",
             "Laravel",
-            "Node.js",
-            "Express.js"
+            // "Node.js",
+            // "Express.js"
+            "EloquentORM",
+            "Cheerio.js",
+            "API Routes (Next.js)"
         ]}
     />
 
     <StackComponent
-        title="Cloud, DevOps & Automatización"
+        title="Cloud & DevOps"
         description="Todo lo que tenga que ver con despliegue, infraestructura y pipelines."
         technologies={[
-            "AWS Cloud",
+            "AWS S3",
             "Docker",
             "Vercel",
-            "N8N",
-            "CLI",
-            "XAMPP"
+            "Render"
         ]}
     />
-
-    <StackComponent
-        title="Desarrollo móvil"
-        description="Incluye las tecnologías que conozco y he utilizado para desarrollar aplicaciones móviles."
-        technologies={[
-            "Android Studio",
-            "Expo",
-            "React Native",
-            "Flutter",
-            "Xcode"
-        ]}
-    />
-
-
 
     <!-- 
         🧩 Consejo final de portfolio

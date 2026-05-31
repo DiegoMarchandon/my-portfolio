@@ -9,6 +9,10 @@
     --color-primary: #0ea5e9;
     --radius-sm: 6px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 .btn{ 
     background: var(--color-primary); 
     border-radius: var(--radius-sm); 

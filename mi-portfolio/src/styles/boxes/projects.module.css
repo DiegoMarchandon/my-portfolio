@@ -31,6 +31,7 @@
     background-color: rgba(0, 24, 70, 0.541);
     grid-area: title;
     justify-content: center;
+    font-family: math;
 }
 
 .titleWrapper a{
@@ -61,4 +62,5 @@
     margin: 10px;
     background-color: rgba(0, 24, 70, 0.541);
     grid-area: sidebar;
+    font-family: system-ui;
 }
