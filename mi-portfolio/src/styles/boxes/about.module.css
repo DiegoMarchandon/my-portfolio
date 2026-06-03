@@ -280,7 +280,21 @@
     }
 
     .softSkills {
+        width: 100%;
+        box-sizing: border-box;
         margin-top: 0.5rem;
+    }
+
+    .timelineItem {
+        grid-template-columns: 32px 1fr;
+        min-width: 0;
+    }
+
+    .tlContent {
+        min-width: 0;
+        overflow: visible;
+        word-break: normal;
+        overflow-wrap: anywhere;
     }
 
     .itemTitle {

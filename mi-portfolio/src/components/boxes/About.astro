@@ -95,13 +95,13 @@ import boxStyles from '../../styles/boxes/about.module.css';
         <h2>Certificaciones</h2>
         <div class={`${boxStyles.CertificatesContainer}`}>
             <CertificateComponent client:load
-                thumbnail={'../../../public/thumbnails/ThumbnailCertificadoIngles.png'}
+                thumbnail={'/thumbnails/ThumbnailCertificadoIngles.png'}
                 certificadoTitle='Certificados de inglés'
                 certificadoInfo={['1st. Adults (3 meses)','2nd. Adults (3 meses)','3rd. Adults (3 meses)']}
                 pdfPath={'pdfs/certificados-ingles.pdf'}
             />
             <CertificateComponent client:load
-                thumbnail={'../../../public/thumbnails/ThumbnailBecaPPU.png'}
+                thumbnail={'thumbnails/ThumbnailBecaPPU.png'}
                 certificadoTitle='Certificados de actividades Universitarias'
                 certificadoInfo={['Dictado de Cursos en Escuelas Secundarias','Coordinador en evento de Internet Seguro 2025','Taller de Construcción de Apps Móviles']}
                 pdfPath={'pdfs/certificados-beca.pdf'}
