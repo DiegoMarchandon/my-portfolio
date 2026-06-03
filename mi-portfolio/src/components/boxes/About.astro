@@ -1,14 +1,112 @@
+---
+import CertificateComponent from '../boxesComponent/CertificateComponent';
+import boxStyles from '../../styles/boxes/about.module.css';
+---
 
 <div id="sobre-mi">
-    <h1>Desarrollador versátil con bases sólidas</h1>
-    <p style="font-family: system-ui;">
-        Comencé mi formación universitaria en Administración, donde desarrollé base analítica en estadística 
-        y matemática. En 2022 reorienté mi camino hacia la tecnología, explorando Data Science con cursos de 
-        IBM en Coursera y herramientas como scikit-learn y R. Ese recorrido me llevó a entender que quería 
-        construir productos, no solo analizarlos, y a mediados de 2023 ingresé a la Tecnicatura en Desarrollo 
-        Web de la cual me recibí a fines de 2025. Desde entonces me focalicé en consolidar un stack moderno y 
-        coherente — JavaScript, TypeScript, React, Next.js, Laravel y Supabase — aplicado en proyectos reales 
-        con despliegue en producción. Actualmente me encuentro profundizando en cloud (AWS) y herramientas de 
-        automatización, con el objetivo de sumar valor desde el primer día en un equipo de desarrollo.
-    </p>
+    <div class={boxStyles.timelineSection}>
+    <h1 class={boxStyles.timelineMainTitle}>Desarrollador versátil con bases sólidas</h1>
+
+    <div class={boxStyles.timeline}>
+        <div class={boxStyles.timelineLine}></div>
+
+        <div class={boxStyles.timelineItem}>
+            <div class={boxStyles.dotWrap}><div class={boxStyles.dot}></div></div>
+            <div class={boxStyles.tlContent}>
+                <div class={boxStyles.itemHeader}>
+                    <p class={boxStyles.itemTitle}>Mi educación previa al desarrollo web</p>
+                    <span class={boxStyles.itemYear}>2018 – 2022</span>
+                </div>
+                <p class={boxStyles.itemBody}>
+                    Comencé mi formación universitaria en Administración, donde desarrollé base analítica en 
+                    estadística y matemática. En 2022 reorienté mi camino hacia la tecnología, explorando 
+                    Data Science con cursos de IBM en Coursera y herramientas como scikit-learn y R. Ese 
+                    recorrido me llevó a entender que quería construir productos, no solo analizarlos.
+                </p>
+            </div>
+        </div>
+
+        <div class={boxStyles.timelineItem}>
+            <div class={boxStyles.dotWrap}><div class={boxStyles.dot}></div></div>
+            <div class={boxStyles.tlContent}>
+                <div class={boxStyles.itemHeader}>
+                    <p class={boxStyles.itemTitle}>Tecnicatura en Desarrollo Web</p>
+                    <span class={boxStyles.itemYear}>2023 – 2025</span>
+                </div>
+                <p class={boxStyles.itemBody}>
+                    A mediados de 2023 ingresé a la Tecnicatura en Desarrollo Web de la cual me recibí a 
+                    fines de 2025. Desde entonces me focalicé en consolidar un stack moderno y coherente — 
+                    JavaScript, TypeScript, React, Next.js, Laravel y Supabase — aplicado en proyectos reales 
+                    con despliegue en producción. En el desarrollo de esos proyectos procuré aplicar buenas 
+                    prácticas de arquitectura y principios como KISS, YAGNI, Single Source of Truth y 
+                    normalización de datos.
+                </p>
+            </div>
+        </div>
+
+        <div class={boxStyles.timelineItem}>
+            <div class={boxStyles.dotWrap}><div class={boxStyles.dot}></div></div>
+            <div class={boxStyles.tlContent}>
+                <div class={boxStyles.itemHeader}>
+                    <p class={boxStyles.itemTitle}>Beca de Extensión Universitaria — UNCo</p>
+                    <span class={boxStyles.itemYear}>2024</span>
+                </div>
+                <div class={boxStyles.becaGrid}>
+                    <p class={boxStyles.itemBody}>
+                        Participé durante 3 meses en una beca de extensión de la Universidad Nacional del 
+                        Comahue, llevando talleres y charlas a escuelas secundarias sobre temáticas 
+                        tecnológicas y uso seguro de internet. Las actividades incluyeron introducción 
+                        práctica a máquinas de Turing, creación de apps con MIT App Inventor y espacios 
+                        de concientización sobre seguridad digital. También coordiné el evento anual 
+                        <em>Internet Seguro</em>, moderando exposiciones en tiempo real.
+                    </p>
+                    <div class={boxStyles.softSkills}>
+                        <p class={boxStyles.softSkillsTitle}>Habilidades aplicadas</p>
+                        <div class={boxStyles.skillTag}><span class={boxStyles.skillIcon}>💬</span>Comunicación técnica a audiencias no técnicas</div>
+                        <div class={boxStyles.skillTag}><span class={boxStyles.skillIcon}>🎯</span>Diseño de experiencias de aprendizaje</div>
+                        <div class={boxStyles.skillTag}><span class={boxStyles.skillIcon}>⚡</span>Improvisación y manejo de imprevistos</div>
+                        <div class={boxStyles.skillTag}><span class={boxStyles.skillIcon}>🤝</span>Trabajo en equipo con autonomía</div>
+                        <div class={boxStyles.skillTag}><span class={boxStyles.skillIcon}>🏅</span>Compromiso sostenido sin supervisión</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class={boxStyles.timelineItem}>
+            <div class={boxStyles.dotWrap}><div class={boxStyles.dot}></div></div>
+            <div class={boxStyles.tlContent}>
+                <div class={boxStyles.itemHeader}>
+                    <p class={boxStyles.itemTitle}>Mi foco actualmente</p>
+                    <span class={boxStyles.itemYear}>2025 →</span>
+                </div>
+                <p class={boxStyles.itemBody}>
+                    Actualmente estoy incorporando Docker a mi flujo de trabajo y próximamente sumaré 
+                    testing con PHPUnit, con foco en tecnologías consolidadas y en entender la estructura 
+                    de código legacy que predomina en muchas empresas — porque integrarse bien a un equipo 
+                    existente es tan importante como escribir código nuevo.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <div style="display:flex; flex-direction: column; align-items: center;">
+        <h2>Certificaciones</h2>
+        <div class={`${boxStyles.CertificatesContainer}`}>
+            <CertificateComponent client:load
+                thumbnail={'../../../public/thumbnails/ThumbnailCertificadoIngles.png'}
+                certificadoTitle='Certificados de inglés'
+                certificadoInfo={['1st. Adults (3 meses)','2nd. Adults (3 meses)','3rd. Adults (3 meses)']}
+                pdfPath={'pdfs/certificados-ingles.pdf'}
+            />
+            <CertificateComponent client:load
+                thumbnail={'../../../public/thumbnails/ThumbnailBecaPPU.png'}
+                certificadoTitle='Certificados de actividades Universitarias'
+                certificadoInfo={['Dictado de Cursos en Escuelas Secundarias','Coordinador en evento de Internet Seguro 2025','Taller de Construcción de Apps Móviles']}
+                pdfPath={'pdfs/certificados-beca.pdf'}
+            />
+        </div>
+    </div>
+
 </div>

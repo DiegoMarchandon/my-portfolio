@@ -1,4 +1,3 @@
-import styles from '../../styles/boxes.module.css';
 import boxStyles from '../../styles/boxes/projects.module.css';
 
 interface iframeComponentProps {
@@ -6,10 +5,11 @@ interface iframeComponentProps {
     iframeSrc: string;
     iframeDescription: string;
     tecnologiasUsadas: Array<string|string[]>;
+    decisionesTecnicas: Array<string|string[]>;
     fuentesUsadas: Array<string|string[]>;
 }
 
-export default function IframeComponent({iframeTitle, iframeSrc,iframeDescription,tecnologiasUsadas,fuentesUsadas}: iframeComponentProps){
+export default function IframeComponent({iframeTitle, iframeSrc,iframeDescription,tecnologiasUsadas,decisionesTecnicas,fuentesUsadas}: iframeComponentProps){
     return(
         <div className={`${boxStyles.iframeContainer}`}>
             <div className={`${boxStyles.titleWrapper}`}>
@@ -23,6 +23,27 @@ export default function IframeComponent({iframeTitle, iframeSrc,iframeDescriptio
                 title="Vista previa del proyecto"
                 >
                 </iframe>
+                <div className={`${boxStyles.footerWrapper}`}>
+                <h3>Fuentes utilizadas</h3>
+                    <ul>
+                        {
+                            fuentesUsadas.map((item,index)=>{
+                                if(Array.isArray(item)){
+                                    return (
+                                            <ul key={index}>
+                                                {
+                                            item.map((itemString,subIndex)=>(
+                                                <li key={`${index}-${subIndex}`}>{itemString}</li>
+                                            ))}
+                                        </ul>
+                                        )
+                                        
+                                }else{
+                                    return <li key={index}>{item}</li>;
+                                }
+                            })}
+                    </ul>
+                </div>
             </div>
             <div className={`${boxStyles.iframeInfo}`}>
                 <div className={`${boxStyles.iframeDescription}`}>
@@ -50,10 +71,10 @@ export default function IframeComponent({iframeTitle, iframeSrc,iframeDescriptio
                             })}
                         </ul>
                     }
-                    <h3>Fuentes utilizadas</h3>
+                    <h3>Decisiones técnicas</h3>
                     <ul>
                         {
-                            fuentesUsadas.map((item,index)=>{
+                            decisionesTecnicas.map((item,index)=>{
                                 if(Array.isArray(item)){
                                     return (
                                             <ul key={index}>
