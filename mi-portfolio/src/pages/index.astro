@@ -1,15 +1,6 @@
 ---
-// import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/layout/Navbar.astro';
-import Boxes from '../components/Boxes.astro';
-import LavaLampBackground from '../components/reactComponents/LavaLampBackground.jsx';
-// import styles from '../styles/global.css';
 ---
-
-<Layout>
-	<Navbar />
-	<LavaLampBackground client:load />
-	<!-- <Welcome /> -->
-	 <Boxes />
-</Layout>
+<script>
+    const lang = navigator.language.startsWith('es') ? 'es' : 'en';
+    window.location.replace(`/${lang}/`);
+</script>

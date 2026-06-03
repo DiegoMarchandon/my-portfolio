@@ -1,12 +1,19 @@
 ---
 import styles from './../../styles/navbar.module.css';
+import { t } from '../../i18n/utils';
+import type { Locale } from '../../i18n/utils';
+
+const { locale } = Astro.props as { locale: Locale };
 
 const links = [
-  {href: "#presentacion", label: "PRESENTACIÓN"},
-  {href: "#stack", label: "STACK"},
-  {href: "#proyectos", label: "PROYECTOS"},
-  {href: "#sobre-mi", label: "SOBRE MI"},
+    { href: `/${locale}/#presentacion`, label: t(locale, 'nav.presentacion') },
+    { href: `/${locale}/#stack`,        label: t(locale, 'nav.stack') },
+    { href: `/${locale}/#proyectos`,    label: t(locale, 'nav.proyectos') },
+    { href: `/${locale}/#sobre-mi`,     label: t(locale, 'nav.sobreMi') },
 ];
+
+const otherLocale = locale === 'es' ? 'en' : 'es';
+const otherLocaleLabel = locale === 'es' ? 'EN' : 'ES';
 ---
 
 <nav class={styles.navStyles}>
@@ -27,6 +34,11 @@ const links = [
                     <a class={styles.aStyles} href={link.href}>{link.label}</a>
                 </li>
             ))}
+            <li class={styles.liStyles}>
+                <a class={`${styles.aStyles} ${styles.localeSwitcher}`} href={`/${otherLocale}/`}>
+                    {otherLocaleLabel}
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -40,7 +52,6 @@ const links = [
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Cerrar al hacer click en un link
     document.querySelectorAll('#nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
             menu?.classList.remove('open');

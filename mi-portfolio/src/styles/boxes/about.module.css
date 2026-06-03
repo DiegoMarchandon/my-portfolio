@@ -144,7 +144,8 @@
 .imagen{
     width: 35rem;
     height: 20rem;
-    margin: 2rem;
+    /* margin: 2rem; */
+    padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(5, 235, 243, 0.767), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

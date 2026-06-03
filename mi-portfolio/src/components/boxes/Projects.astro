@@ -2,18 +2,24 @@
 import styles from '../../styles/boxes.module.css';
 import boxStyles from '../../styles/boxes/projects.module.css';
 import IframeComponent from '../boxesComponent/IframeComponent';
+import { t } from '../../i18n/utils';
+import type { Locale } from '../../i18n/utils';
+
+const { locale } = Astro.props as { locale: Locale };
 ---
 
 <div id="proyectos" class={`${styles.boxStyles}`}>
     <div class={`${boxStyles.boxContainer}`}>
         
         <IframeComponent 
+            client:load
+            locale={locale}
             iframeTitle="Congreso Argentino"
             iframeSrc="https://congresistas-arg-hlfj.vercel.app/"
             screenshot="/screenshots/screenshot-congreso.png"
-            iframeDescription="Plataforma que visualiza en tiempo real la 
-            composición y actividad de ambas cámaras del Congreso Argentino 
-            (Diputados y Senadores)"
+            iframeDescription={locale === 'es'
+                ? 'Plataforma que visualiza en tiempo real la composición y actividad de ambas cámaras del Congreso Argentino (Diputados y Senadores)'
+                : 'Platform that visualizes in real time the composition and activity of both chambers of the Argentine Congress (Deputies and Senators)'}
             tecnologiasUsadas={[
                 'Next.16',
                 ['React 19','Typescript','API Routes'],
@@ -40,11 +46,14 @@ import IframeComponent from '../boxesComponent/IframeComponent';
         />
 
         <IframeComponent 
+            client:load
+            locale={locale}
             iframeTitle="Blog de Tatuajes Old-School"
             iframeSrc="https://tp3laravel-1.onrender.com/"
             screenshot="/screenshots/screenshot-tatuajes.png"
-            iframeDescription="App de blogging PWA para realizar y gestionar posts relacionados a tatuajes y seguir e interactuar con otros usuarios.
-                        Se realizó con temática de tatuajes Tradicionales Americanos/ Old School."
+            iframeDescription={locale === 'es'
+                ? 'App de blogging PWA para realizar y gestionar posts relacionados a tatuajes y seguir e interactuar con otros usuarios. Se realizó con temática de tatuajes Tradicionales Americanos/ Old School.'
+                : 'PWA blogging app to create and manage tattoo-related posts and follow and interact with other users. Built around an American Traditional / Old School tattoo theme.'}
             tecnologiasUsadas={[
                 'Laravel 12.15.0',
                 ['PHP 8.2.12','Blade(templates + components)','Eloquent ORM','Controllers, Requests, Middleware'],

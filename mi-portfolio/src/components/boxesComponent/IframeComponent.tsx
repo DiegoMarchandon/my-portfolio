@@ -5,6 +5,7 @@ interface IframeComponentProps {
     iframeSrc: string;
     iframeDescription: string;
     screenshot: string;
+    locale: 'es' | 'en';
     tecnologiasUsadas: Array<string | string[]>;
     decisionesTecnicas: Array<string | string[]>;
     fuentesUsadas: Array<string | string[]>;
@@ -30,10 +31,17 @@ export default function IframeComponent({
     iframeSrc,
     iframeDescription,
     screenshot,
+    locale,
     tecnologiasUsadas,
     decisionesTecnicas,
     fuentesUsadas
 }: IframeComponentProps) {
+    const labels = {
+        technologies: locale === 'es' ? 'Tecnologías utilizadas' : 'Technologies used',
+        decisions:    locale === 'es' ? 'Decisiones técnicas'    : 'Technical decisions',
+        sources:      locale === 'es' ? 'Fuentes utilizadas'     : 'Sources used',
+        visit:        locale === 'es' ? 'Ver proyecto →'         : 'View project →',
+    };
     return (
     <div className={boxStyles.iframeContainer}>
         <div className={boxStyles.titleWrapper}>
@@ -59,11 +67,11 @@ export default function IframeComponent({
                     rel="noopener noreferrer"
                     className={boxStyles.visitBtn}
                 >
-                    Ver proyecto →
+                    {labels.visit}
                 </a>
             </div>
             <div className={boxStyles.footerWrapper}>
-                <h3>Fuentes utilizadas</h3>
+                <h3>{labels.sources}</h3>
                 <ul>{renderList(fuentesUsadas)}</ul>
             </div>
         </div>
@@ -73,9 +81,9 @@ export default function IframeComponent({
                 <p>{iframeDescription}</p>
             </div>
             <div className={boxStyles.iframeTechnologies}>
-                <h3>Tecnologías utilizadas</h3>
+                <h3>{labels.technologies}</h3>
                 <ul>{renderList(tecnologiasUsadas)}</ul>
-                <h3>Decisiones técnicas</h3>
+                <h3>{labels.decisions}</h3>
                 <ul>{renderList(decisionesTecnicas)}</ul>
             </div>
         </div>

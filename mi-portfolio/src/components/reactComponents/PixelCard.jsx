@@ -6,7 +6,7 @@ import styles from '../../styles/reactStyles/PixelCard.module.css';
 // import LocationLogo from './logos/locationLogo';
 
 
-export default function PixelCard(){
+export default function PixelCard({locale = 'es'}){
 
     const [isHover, setIsHover] = useState(false);
     const x = useMotionValue(0);
@@ -69,13 +69,21 @@ return (
           <div class={styles.data}>
             <div class={styles.logoContainer}>
               <img class={styles.logo} src='./logos/locationLogo.png' />
-              <h5 class={styles.logoText}>Localización</h5>
+              <h5 class={styles.logoText}>
+                {locale === 'es' ? 'Localización' : 'Location'}
+              </h5>
               <p>Neuquén </p>
             </div>
             <div class={styles.logoContainer}>
               <img class={styles.logo} src='./logos/focusLogo.png' />
-              <h5 class={styles.logoText}>Enfocado en</h5>
-              <p>Reforzar mis conocimientos sobre automatización de procesos</p>
+              <h5 class={styles.logoText}>
+                {locale === 'es' ? 'Enfocado en' : 'Currently focused on'}
+              </h5>
+              <p>
+                {locale === 'es'
+                  ? 'Incorporando Docker y testing con PHPUnit'
+                  : 'Incorporating Docker and testing with PHPUnit'}
+              </p>
             </div>
           </div>
         </div>

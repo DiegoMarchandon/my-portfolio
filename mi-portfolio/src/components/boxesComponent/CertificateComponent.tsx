@@ -6,9 +6,10 @@ interface CertificateComponentProps {
     certificadoTitle: string;
     certificadoInfo: Array<string | string[]>;
     pdfPath: string;
+    locale: 'es' | 'en';
 }
 
-export default function CertificateComponent({ thumbnail, certificadoTitle, certificadoInfo, pdfPath }: CertificateComponentProps) {
+export default function CertificateComponent({ thumbnail, certificadoTitle, certificadoInfo, pdfPath, locale }: CertificateComponentProps) {
     const [modalOpen, setModalOpen] = useState(false);
 
     return (
@@ -33,7 +34,7 @@ export default function CertificateComponent({ thumbnail, certificadoTitle, cert
                 <div className={boxStyles.thumbnailWrapper} onClick={() => setModalOpen(true)}>
                     <img className={boxStyles.imagen} src={thumbnail} alt="thumbnail imagen" />
                     <div className={boxStyles.thumbnailOverlay}>
-                        <span>Ver certificado</span>
+                        <span>{locale === 'es' ? 'Ver certificado' : 'view Certificate'}</span>
                     </div>
                 </div>
             </div>

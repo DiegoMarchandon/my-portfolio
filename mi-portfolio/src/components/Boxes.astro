@@ -4,13 +4,15 @@ import PresentationBox from '../components/boxes/Presentation.astro';
 import StackBox from '../components/boxes/Stack.astro';
 import AboutBox from '../components/boxes/About.astro';
 import ProjectsBox from '../components/boxes/Projects.astro';
+
+const { locale } = Astro.props;
 ---
 
 
 <div class="page-wrapper">
-    <PresentationBox />
-    <StackBox />
+    <PresentationBox locale={locale} />
+    <StackBox locale={locale}/>
     <div class={`${styles.boxStyles} ${styles.projectsBox}`}></div>
-    <ProjectsBox />
-    <AboutBox />
+    <ProjectsBox locale={locale}/>
+    <AboutBox locale={locale}/>
 </div>

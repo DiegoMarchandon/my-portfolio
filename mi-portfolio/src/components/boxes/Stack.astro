@@ -1,56 +1,25 @@
 ---
 import styles from '../../styles/boxes/stack.module.css';
 import StackComponent from '../reactComponents/StackComponent';
+import { t } from '../../i18n/utils';
+import type { Locale } from '../../i18n/utils';
+
+const { locale } = Astro.props as { locale: Locale };
+
+const categories = t(locale, 'stack.categories');
 ---
 
 <div id="stack" class={styles.boxContainer}>
-    <h1 class={styles.stackTitle}>Mi Stack tecnológico</h1>
-    <p class={styles.stackSubtitle}>Herramientas con las que acostumbro trabajar y tengo conocimientos</p>
+    <h1 class={styles.stackTitle}>{t(locale, 'stack.title')}</h1>
+    <p class={styles.stackSubtitle}>{t(locale, 'stack.subtitle')}</p>
 
     <div class={styles.stackGrid}>
-        <StackComponent
-            title="Stack Principal"
-            description="Incluye tecnologías con las que más me acostumbré a trabajar."
-            technologies={[
-                "JavaScript/Typescript",
-                "React + Next.js",
-                "Tailwind CSS",
-                "Supabase (PostgreSQL)",
-                "Vercel/Render"
-            ]}
-        />
-        <StackComponent
-            title="Frontend & Render"
-            description="Incluye todo lo que corre el cliente + frameworks de render + UI/UX."
-            technologies={[
-                "Typescript",
-                "React.js",
-                "Next.js",
-                "Astro",
-                "Blade",
-                "Alpine.js"
-            ]}
-        />
-        <StackComponent
-            title="Backend, APIs & Data"
-            description="Incluye todo lo relacionado a la lógica del servidor, datos y APIs."
-            technologies={[
-                "PHP",
-                "Laravel",
-                "EloquentORM",
-                "Cheerio.js",
-                "API Routes (Next.js)"
-            ]}
-        />
-        <StackComponent
-            title="Cloud & DevOps"
-            description="Todo lo que tenga que ver con despliegue, infraestructura y pipelines."
-            technologies={[
-                "AWS S3",
-                "Docker",
-                "Vercel",
-                "Render"
-            ]}
-        />
+        {categories.map((cat: { title: string; description: string; technologies: string[] }) => (
+            <StackComponent
+                title={cat.title}
+                description={cat.description}
+                technologies={cat.technologies}
+            />
+        ))}
     </div>
 </div>
