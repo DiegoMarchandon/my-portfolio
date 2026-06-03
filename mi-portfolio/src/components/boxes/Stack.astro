@@ -1,72 +1,56 @@
 ---
-import styles from '../../styles/boxes.module.css';
-import boxStyles from '../../styles/boxes/stack.module.css';
+import styles from '../../styles/boxes/stack.module.css';
 import StackComponent from '../reactComponents/StackComponent';
 ---
 
-<div id="stack" class={`${boxStyles.boxContainer} ${styles.boxStyles}`}>
-    <h1 class={`${styles.MainText} ${styles.StackMainText}`}>Mi Stack tecnológico</h1>
-    <p class={`${styles.subText} ${styles.StackSubText}`}>Herramientas con las que acostumbro trabajar y tengo conocimientos</p class={styles.subText}>
-    <StackComponent
-        title="Stack Principal"
-        description="Inlcuye tecnologías con las que más me acostumbré a trabajar."
-        technologies={[
-            "JavaScript/Typescript",
-            "React + Next.js",
-            "Tailwind CSS",
-            "Supabase (PostgreSQL)",
-            "Vercel/Render"
-        ]}
-    />
+<div id="stack" class={styles.boxContainer}>
+    <h1 class={styles.stackTitle}>Mi Stack tecnológico</h1>
+    <p class={styles.stackSubtitle}>Herramientas con las que acostumbro trabajar y tengo conocimientos</p>
 
-    <StackComponent
-        title="Frontend & Render"
-        description="Incluye todo lo que corre el cliente + frameworks de render + UI/UX."
-        technologies={[
-            // "jQuery",
-            "Typescript",
-            "React.js",
-            "Next.js",
-            "Astro",
-            "Blade",
-            "Alpine.js"
-        ]}
-    />
-
-    <StackComponent
-        title="Backend, APIs & Data"
-        description="incluye todo lo relacionado a la lógica del servidor, datos y APIs."
-        technologies={[
-            // "AJAX",
-            "PHP",
-            "Laravel",
-            // "Node.js",
-            // "Express.js"
-            "EloquentORM",
-            "Cheerio.js",
-            "API Routes (Next.js)"
-        ]}
-    />
-
-    <StackComponent
-        title="Cloud & DevOps"
-        description="Todo lo que tenga que ver con despliegue, infraestructura y pipelines."
-        technologies={[
-            "AWS S3",
-            "Docker",
-            "Vercel",
-            "Render"
-        ]}
-    />
-
-    <!-- 
-        🧩 Consejo final de portfolio
-
-        Tu portfolio no solo debe listar tecnologías, sino contar qué sabés hacer con ellas.
-        Por ejemplo, en vez de:
-        “Node.js”
-        podrías poner:
-        “Desarrollo de APIs REST escalables con Node.js y Express”
-        Eso aumenta muchísimo tu valor percibido.
-    -->
+    <div class={styles.stackGrid}>
+        <StackComponent
+            title="Stack Principal"
+            description="Incluye tecnologías con las que más me acostumbré a trabajar."
+            technologies={[
+                "JavaScript/Typescript",
+                "React + Next.js",
+                "Tailwind CSS",
+                "Supabase (PostgreSQL)",
+                "Vercel/Render"
+            ]}
+        />
+        <StackComponent
+            title="Frontend & Render"
+            description="Incluye todo lo que corre el cliente + frameworks de render + UI/UX."
+            technologies={[
+                "Typescript",
+                "React.js",
+                "Next.js",
+                "Astro",
+                "Blade",
+                "Alpine.js"
+            ]}
+        />
+        <StackComponent
+            title="Backend, APIs & Data"
+            description="Incluye todo lo relacionado a la lógica del servidor, datos y APIs."
+            technologies={[
+                "PHP",
+                "Laravel",
+                "EloquentORM",
+                "Cheerio.js",
+                "API Routes (Next.js)"
+            ]}
+        />
+        <StackComponent
+            title="Cloud & DevOps"
+            description="Todo lo que tenga que ver con despliegue, infraestructura y pipelines."
+            technologies={[
+                "AWS S3",
+                "Docker",
+                "Vercel",
+                "Render"
+            ]}
+        />
+    </div>
 </div>

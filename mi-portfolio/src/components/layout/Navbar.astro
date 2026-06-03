@@ -1,28 +1,50 @@
 ---
 import styles from './../../styles/navbar.module.css';
 
-/* código javascript dentro del frontmatter (entre ---) */
 const links = [
   {href: "#presentacion", label: "PRESENTACIÓN"},
   {href: "#stack", label: "STACK"},
   {href: "#proyectos", label: "PROYECTOS"},
   {href: "#sobre-mi", label: "SOBRE MI"},
 ];
---- 
-
-<!-- Poner una animación debajo del Navbar que de una línea horizontal que se vaya llenando en base a la cantidad de contenido que le falta por ver -->
+---
 
 <nav class={styles.navStyles}>
     <div class={styles.navChild}>
         <h2 id={styles.myNameHome}>DIEGO <span class={styles.lastNameStyles}>MARCHANDON</span></h2>
     </div>
-    <div class={styles.navChild}>
-      <ul class={styles.ulStyles}>
-      {links.map(link => (
-          <li class={styles.liStyles}>
-            <a class={styles.aStyles} href={link.href}>{link.label}</a>
-          </li>
-        ))}
-      </ul>
-  </div>
+
+    <button class={styles.hamburger} id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+        <span class={styles.bar}></span>
+        <span class={styles.bar}></span>
+        <span class={styles.bar}></span>
+    </button>
+
+    <div class={styles.navChild} id="nav-menu">
+        <ul class={styles.ulStyles}>
+            {links.map(link => (
+                <li class={styles.liStyles}>
+                    <a class={styles.aStyles} href={link.href}>{link.label}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
 </nav>
+
+<script>
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('nav-menu');
+
+    btn?.addEventListener('click', () => {
+        const isOpen = menu?.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Cerrar al hacer click en un link
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu?.classList.remove('open');
+            btn?.setAttribute('aria-expanded', 'false');
+        });
+    });
+</script>

@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;        /* ocupa siempre la ventana visible */
+  height: 100%;        /* ocupa siempre la ventana visible */
   overflow: hidden;
   background: #0a0f14;
   z-index: -1;          /* detrás del contenido */

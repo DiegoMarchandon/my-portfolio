@@ -1,18 +1,70 @@
 /* forma 1) JS object. No se puede usar en archivos .css */
-/* export const theme = {
-    
-} */
 
-/* forma 2) CSS variables */
+/* Tokens de breakpoints */
 :root{
     --Background-Portfolio: #000000; 
     --color-primary: #0ea5e9;
     --radius-sm: 6px;
+    --bp-mobile: 480px;
+    --bp-tablet: 768px;
+    --bp-desktop: 1024px;
+}
+
+/* DEBUG para poder ver el/los elementos que se salen del borde.  */
+/* * {
+    outline: 1px solid rgba(255,0,0,0.2);
+} */
+/* Reset base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Wrapper global ── */
+.page-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 0 0.75rem;
+  }
 }
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 .btn{ 
     background: var(--color-primary); 
     border-radius: var(--radius-sm); 

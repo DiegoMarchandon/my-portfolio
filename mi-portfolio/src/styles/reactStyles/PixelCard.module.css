@@ -120,3 +120,18 @@
   width: 18px;
   height: 18px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90vw;
+        max-width: 320px;
+        height: auto;
+        min-height: 255px;
+    }
+}

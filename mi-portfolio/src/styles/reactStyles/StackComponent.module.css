@@ -1,59 +1,39 @@
-.StackComponentContainer{
-    /* padding: 15px; */
-    margin: 20px;
-    /* background: #020024; */
-    /* border-radius: 20px; */
-    /* background: linear-gradient(174deg,rgba(2, 0, 36, 1) 0%, rgb(30, 0, 85) 78%, rgb(0, 54, 65) 97%); */
-    width:90%;
-    display:flex;
-    flex-direction: column;
-    justify-content:space-around;
-  
-    background: rgba(17, 24, 39, 0.75); /* gris oscuro translúcido */
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 24px;
+.StackComponentContainer {
+    background-color: rgba(0, 24, 70, 0.541);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    font-family: system-ui;
 }
 
+.titleStack {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin: 0 0 6px;
+}
 
-.ulStack{
-    display: flex;
-    /* align-items:flex-start; */
-    justify-content:flex-start;
+.descriptionStack {
+    font-size: 0.85rem;
+    color: rgba(185, 185, 185, 0.8);
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.ulStack {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
-.liStack{
-    font-size: 0.9rem;
-    font-weight: 400;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(0, 5, 98);
-    padding: 0.6rem;
-    margin: 0px 10px; 
-    border: 1px solid #09008d;
-    border-radius: 20px;
-    transition: background-color 0.5s ease 
-}
-
-.titleStack{
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* max-width:500px */
-    margin:0;
-}
-
-.descriptionStack{
+.liStack {
     font-size: 0.8rem;
-    color: rgb(230, 230, 230);
-    letter-spacing: 1px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* max-width:500px */
-}
-
-.liStack:hover{
-    background-color: rgba(0, 255, 255, 0.597);
-    cursor: pointer;
-    color: black;
+    background: rgba(0, 217, 255, 0.08);
+    border: 0.5px solid rgba(0, 217, 255, 0.25);
+    color: rgba(0, 217, 255, 0.9);
+    border-radius: 6px;
+    padding: 4px 10px;
+    white-space: nowrap;
 }

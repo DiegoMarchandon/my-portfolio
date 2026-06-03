@@ -1,19 +1,40 @@
-.boxContainer{
+.boxContainer {
     background-color: rgba(109, 109, 109, 0.214);
-    /* display: flex; */
-    align-items: center;
-    /* padding-left: 10%; */
-    justify-content: center;
+    padding: 60px 2rem;
+    display: flex;
     flex-direction: column;
-    /* height: 1100px; */
-
-    padding: 30px 0;
+    align-items: center;
 }
 
-.StackMainText .StackSubText{
-    padding-right: 20px;
+.stackTitle {
+    font-size: 2rem;
+    color: white;
+    margin: 0 0 8px;
+    text-align: center;
 }
 
-/* .StackSubText{
+.stackSubtitle {
+    font-size: 0.95rem;
+    color: rgba(185, 185, 185, 0.8);
+    margin: 0 0 2rem;
+    text-align: center;
+    font-family: system-ui;
+}
 
-} */
+.stackGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 860px;
+}
+
+@media (max-width: 768px) {
+    .boxContainer {
+        padding: 40px 1rem;
+    }
+
+    .stackGrid {
+        grid-template-columns: 1fr;
+    }
+}

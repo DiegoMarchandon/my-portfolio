@@ -36,3 +36,20 @@
     flex-direction: row;
     justify-content:space-between;
 }
+
+@media (max-width: 768px) {
+    .boxContainer {
+        padding: 100px 1rem 40px;
+    }
+
+    .infoContainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .introduction {
+        max-width: 100%;
+    }
+}

@@ -269,3 +269,54 @@
     min-height: 600px;
     border: none;
 }
+
+@media (max-width: 768px) {
+    .timelineSection {
+        padding: 0 0.5rem;
+    }
+
+    .beca-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .softSkills {
+        margin-top: 0.5rem;
+    }
+
+    .itemTitle {
+        font-size: 14px;
+    }
+
+    .itemYear {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .timelineMainTitle {
+        font-size: 1.3rem;
+    }
+
+    .CertificatesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagen {
+        width: 90vw;
+        height: auto;
+    }
+
+    .imagenWrapper {
+        width: 95vw;
+    }
+
+    .modalContent {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .pdfFrame {
+        min-height: 400px;
+    }
+}
