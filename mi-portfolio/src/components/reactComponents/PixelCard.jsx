@@ -58,7 +58,7 @@ return (
         <div class={styles.content}>
           <div class={styles.avatarContainer}>
             <img
-              src="/mi-foto.jpg"
+              src="../foto/mi-foto.jpg"
               alt="avatar"
               class={styles.avatar}
             />
@@ -68,14 +68,14 @@ return (
 
           <div class={styles.data}>
             <div class={styles.logoContainer}>
-              <img class={styles.logo} src='./logos/locationLogo.png' />
+              <img class={styles.logo} src='../logos/locationLogo.png' />
               <h5 class={styles.logoText}>
                 {locale === 'es' ? 'Localización' : 'Location'}
               </h5>
               <p>Neuquén </p>
             </div>
             <div class={styles.logoContainer}>
-              <img class={styles.logo} src='./logos/focusLogo.png' />
+              <img class={styles.logo} src='../logos/focusLogo.png' />
               <h5 class={styles.logoText}>
                 {locale === 'es' ? 'Enfocado en' : 'Currently focused on'}
               </h5>
