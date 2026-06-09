@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/layout/Navbar.astro';
+import Boxes from '../../components/Boxes.astro';
+import LavaLampBackground from '../../components/reactComponents/LavaLampBackground.jsx';
+---
+
+<Layout>
+    <Navbar locale="pt" />
+    <LavaLampBackground client:load />
+    <Boxes locale="pt" />
+</Layout>

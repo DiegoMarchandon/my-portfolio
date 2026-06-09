@@ -5,7 +5,8 @@ interface IframeComponentProps {
     iframeSrc: string;
     iframeDescription: string;
     screenshot: string;
-    locale: 'es' | 'en';
+    locale: 'es' | 'en' | 'pt';
+    // locale: string;
     tecnologiasUsadas: Array<string | string[]>;
     decisionesTecnicas: Array<string | string[]>;
     fuentesUsadas: Array<string | string[]>;
@@ -36,12 +37,14 @@ export default function IframeComponent({
     decisionesTecnicas,
     fuentesUsadas
 }: IframeComponentProps) {
+
     const labels = {
-        technologies: locale === 'es' ? 'Tecnologías utilizadas' : 'Technologies used',
-        decisions:    locale === 'es' ? 'Decisiones técnicas'    : 'Technical decisions',
-        sources:      locale === 'es' ? 'Fuentes utilizadas'     : 'Sources used',
-        visit:        locale === 'es' ? 'Ver proyecto →'         : 'View project →',
-    };
+        technologies: {es:'Tecnologías utilizadas',en:'Technologies used',pt:'Tecnologias utilizadas'},
+        decisions: {es:'Decisiones técnicas',en:'Technical decisions',pt:'Decisões técnicas'},
+        sources: {es:'Fuentes utilizadas',en:'Sources used',pt:'Fontes utilizadas'},
+        visit: {es:'Ver proyecto →',en:'View project →',pt:'Ver projeto →'}
+    }
+
     return (
     <div className={boxStyles.iframeContainer}>
         <div className={boxStyles.titleWrapper}>
@@ -67,11 +70,11 @@ export default function IframeComponent({
                     rel="noopener noreferrer"
                     className={boxStyles.visitBtn}
                 >
-                    {labels.visit}
+                    {labels.visit[locale]}
                 </a>
             </div>
             <div className={boxStyles.footerWrapper}>
-                <h3>{labels.sources}</h3>
+                <h3>{labels.sources[locale]}</h3>
                 <ul>{renderList(fuentesUsadas)}</ul>
             </div>
         </div>
@@ -81,9 +84,9 @@ export default function IframeComponent({
                 <p>{iframeDescription}</p>
             </div>
             <div className={boxStyles.iframeTechnologies}>
-                <h3>{labels.technologies}</h3>
+                <h3>{labels.technologies[locale]}</h3>
                 <ul>{renderList(tecnologiasUsadas)}</ul>
-                <h3>{labels.decisions}</h3>
+                <h3>{labels.decisions[locale]}</h3>
                 <ul>{renderList(decisionesTecnicas)}</ul>
             </div>
         </div>

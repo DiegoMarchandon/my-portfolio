@@ -1,9 +1,11 @@
 import es from './es';
 import en from './en';
+import pt from './pt';
 
-const translations = { es, en };
 
-export type Locale = 'es' | 'en';
+const translations = { es, en, pt };
+
+export type Locale = 'es' | 'en' | 'pt';
 
 export function t(locale: Locale, key: string): any {
     const keys = key.split('.');
@@ -16,6 +18,6 @@ export function t(locale: Locale, key: string): any {
  
 export function getLocaleFromUrl(url: URL): Locale {
     const [, lang] = url.pathname.split('/');
-    if (lang === 'en' || lang === 'es') return lang;
+    if (lang === 'en' || lang === 'es' || lang === 'pt') return lang;
     return 'es';
 }

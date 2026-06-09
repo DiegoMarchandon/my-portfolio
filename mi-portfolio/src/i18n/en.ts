@@ -35,9 +35,9 @@ export default {
                 technologies: ['PHP','Laravel','EloquentORM','Cheerio.js','API Routes (Next.js)'],
             },
             {
-                title: 'Cloud & DevOps',
-                description: 'Deployment, infrastructure and pipelines.',
-                technologies: ['AWS S3','Docker','Vercel','Render'],
+                title: 'Deploy, Infrastructure & Workflow',
+                description: 'Technologies related to deployment, code management, and integration processes.',
+                technologies: ['AWS S3','Docker','Vercel','Render','Git','GitHub','Git Flow'],
             },
         ],
     },
@@ -75,7 +75,7 @@ export default {
             {
                 title: 'Current focus',
                 year: '2025 →',
-                body: 'I am currently incorporating Docker into my workflow and will soon add testing with PHPUnit, focusing on established technologies and understanding the legacy code structures common in many companies — because integrating well into an existing team is just as important as writing new code.',
+                body: 'I currently apply well-established software design principles—such as KISS, YAGNI, SSOT, and SOLID—to my projects, and I’ve incorporated Docker and PHPUnit testing into my workflow. I focus on proven practices and technologies and on understanding the legacy code structures that are common in many companies. Because integrating smoothly into an existing team is just as important as writing new code.',
             },
         ],
         certificationsTitle: 'Certifications',

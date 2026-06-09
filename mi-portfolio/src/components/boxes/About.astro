@@ -8,6 +8,23 @@ const { locale } = Astro.props as { locale: Locale };
 
 const items = t(locale, 'about.items');
 const softSkillIcons = ['💬', '🎯', '⚡', '🤝', '🏅'];
+
+const firstCertificatesLabels = {
+    certificationTitle:{es:'Certificados de inglés',en:'English certificates',pt:'certificados de inglês'},
+    certificationInfo:{es:['1st. Adults (3 meses)','2nd. Adults (3 meses)','3rd. Adults (3 meses)'],
+        en:['1st. Adults (3 months)','2nd. Adults (3 months)','3rd. Adults (3 months)'],
+        pt:['1st. Adults (3 meses)','2nd. Adults (3 meses)','3rd. Adults (3 meses)']
+    }
+}
+
+const secondCertificateLabels = {
+    certificationTitle:{es:'Certificados de actividades Universitarias',en:'University activity certificates',pt:'Certificados de atividades universitárias'},
+    certificationInfo:{es:['Dictado de Cursos en Escuelas Secundarias','Coordinador en evento de Internet Seguro 2025','Taller de Construcción de Apps Móviles'],
+        en:['Teaching Courses in High Schools','Coordinator at Internet Seguro 2025 event','Mobile App Development Workshop'],
+        pt:['Ministrando cursos em escolas de ensino médio','Coordenador do evento Internet Seguro 2025','Oficina de desenvolvimento de aplicativos móveis']
+    }
+}
+
 ---
 
 <div id="sobre-mi">
@@ -56,18 +73,16 @@ const softSkillIcons = ['💬', '🎯', '⚡', '🤝', '🏅'];
                 client:load
                 locale={locale}
                 thumbnail={'/thumbnails/ThumbnailCertificadoIngles.png'}
-                certificadoTitle={locale === 'es' ? 'Certificados de inglés' : 'English certificates'}
-                certificadoInfo={['1st. Adults (3 meses)','2nd. Adults (3 meses)','3rd. Adults (3 meses)']}
+                certificadoTitle={firstCertificatesLabels.certificationTitle[locale]}
+                certificadoInfo={firstCertificatesLabels.certificationInfo[locale]}
                 pdfPath={'/pdfs/certificado-ingles.pdf'}
             />
             <CertificateComponent
                 client:load
                 locale={locale}
                 thumbnail={'/thumbnails/ThumbnailBecaPPU.png'}
-                certificadoTitle={locale === 'es' ? 'Certificados de actividades Universitarias' : 'University activity certificates'}
-                certificadoInfo={locale === 'es'
-                    ? ['Dictado de Cursos en Escuelas Secundarias','Coordinador en evento de Internet Seguro 2025','Taller de Construcción de Apps Móviles']
-                    : ['Teaching Courses in High Schools','Coordinator at Internet Seguro 2025 event','Mobile App Development Workshop']}
+                certificadoTitle={secondCertificateLabels.certificationTitle[locale]}
+                certificadoInfo={secondCertificateLabels.certificationInfo[locale]}
                 pdfPath={'/pdfs/certificado-beca.pdf'}
             />
         </div>

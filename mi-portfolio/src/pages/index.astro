@@ -1,6 +1,10 @@
 ---
 ---
 <script>
-    const lang = navigator.language.startsWith('es') ? 'es' : 'en';
+    const lang = navigator.language.startsWith('es')
+        ? 'es'
+        : navigator.language.startsWith('pt')
+            ? 'pt'
+            : 'en';
     window.location.replace(`/${lang}/`);
 </script>

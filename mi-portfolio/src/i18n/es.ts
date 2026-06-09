@@ -35,9 +35,9 @@ export default {
                 technologies: ['PHP','Laravel','EloquentORM','Cheerio.js','API Routes (Next.js)'],
             },
             {
-                title: 'Cloud & DevOps',
-                description: 'Todo lo que tenga que ver con despliegue, infraestructura y pipelines.',
-                technologies: ['AWS S3','Docker','Vercel','Render'],
+                title: 'Despliegue, Infraestructura & Flujo de Trabajo',
+                description: 'Tecnologías vinculadas a despliegue, gestión del código y procesos de integración.',
+                technologies: ['AWS S3','Docker','Vercel','Render','Git','GitHub','Git Flow'],
             },
         ],
     },
@@ -75,7 +75,7 @@ export default {
             {
                 title: 'Mi foco actualmente',
                 year: '2025 →',
-                body: 'Actualmente estoy incorporando Docker a mi flujo de trabajo y próximamente sumaré testing con PHPUnit, con foco en tecnologías consolidadas y en entender la estructura de código legacy que predomina en muchas empresas — porque integrarse bien a un equipo existente es tan importante como escribir código nuevo.',
+                body: 'Actualmente estoy aplicando principios de diseño de software reconocidos, como KISS, YAGNI, SSOT y SOLID en mis proyectos, además de incorporar Docker y testing con PHPUnit a mi flujo de trabajo. Tengo foco en prácticas y tecnologías consolidadas y en entender la estructura de código legacy que predomina en muchas empresas. \nPorque integrarse bien a un equipo existente es tan importante como escribir código nuevo.',
             },
         ],
         certificationsTitle: 'Certificaciones',

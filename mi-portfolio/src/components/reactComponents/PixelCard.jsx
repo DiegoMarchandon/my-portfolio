@@ -34,6 +34,13 @@ export default function PixelCard({locale = 'es'}){
         y.set(offsetY);
     };
 
+    const localeSwitch = {
+      es: {location: 'Localización',focusOn: 'Enfocado en',purpose: 'Incorporar Docker y testing con PHPUnit'},
+      en: {location: 'Location',focusOn: 'Currently focused on',purpose: 'Incorporating Docker and testing with PHPUnit'},
+      pt: {location: 'Localização',focusOn: 'Focado em',purpose: 'Incorporar o Docker e testes com o PHPUnit'},
+      
+    }
+
 return (
     <div class={styles.container}>
       <motion.div
@@ -63,26 +70,29 @@ return (
               class={styles.avatar}
             />
             <h3 class={styles.title}>Diego Marchandon</h3>
-            <p class={styles.subtitle}>Full-stack & Mobile Developer</p>
+            <p class={styles.subtitle}>Full-stack Developer</p>
           </div>
 
           <div class={styles.data}>
             <div class={styles.logoContainer}>
               <img class={styles.logo} src='../logos/locationLogo.png' />
               <h5 class={styles.logoText}>
-                {locale === 'es' ? 'Localización' : 'Location'}
+                {/* {locale === 'es' ? 'Localización' : 'Location'} */}
+                {localeSwitch[locale].location}
               </h5>
               <p>Neuquén </p>
             </div>
             <div class={styles.logoContainer}>
               <img class={styles.logo} src='../logos/focusLogo.png' />
               <h5 class={styles.logoText}>
-                {locale === 'es' ? 'Enfocado en' : 'Currently focused on'}
+                {/* {locale === 'es' ? 'Enfocado en' : 'Currently focused on'} */}
+                {localeSwitch[locale].focusOn}
               </h5>
               <p>
-                {locale === 'es'
-                  ? 'Incorporando Docker y testing con PHPUnit'
-                  : 'Incorporating Docker and testing with PHPUnit'}
+                {/* {locale === 'es'
+                  ? 'Incorporar Docker y testing con PHPUnit'
+                  : 'Incorporating Docker and testing with PHPUnit'} */}
+                {localeSwitch[locale].purpose}
               </p>
             </div>
           </div>

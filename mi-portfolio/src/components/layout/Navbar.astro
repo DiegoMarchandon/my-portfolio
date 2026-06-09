@@ -12,8 +12,16 @@ const links = [
     { href: `/${locale}/#sobre-mi`,     label: t(locale, 'nav.sobreMi') },
 ];
 
-const otherLocale = locale === 'es' ? 'en' : 'es';
-const otherLocaleLabel = locale === 'es' ? 'EN' : 'ES';
+const localeSwitch = {
+    es: {next:'en',label:'EN'},
+    en: {next: 'pt',label: 'PT'},
+    pt: {next: 'es',label: 'ES'},
+} as const;
+
+// const otherLocale = locale === 'es' ? 'en' : 'es';
+// const otherLocaleLabel = locale === 'es' ? 'EN' : 'ES';
+const {next: otherLocale, label: otherLocaleLabel} = localeSwitch[locale];
+
 ---
 
 <nav class={styles.navStyles}>
