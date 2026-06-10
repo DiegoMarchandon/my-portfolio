@@ -11,7 +11,7 @@ export default {
         available: 'Disponível para oportunidades profissionais',
         intro: 'Desenvolvedor web formado em 2025, desenvolvi projetos com diferentes conjuntos de tecnologias e finalidades, movido por uma curiosidade constante para aprender novas ferramentas, linguagens e tecnologias que, quando aplicadas, resultam em produtos completamente integrados.',
         focus: 'Aprimorando meus conhecimentos em automação de processos',
-        location: 'Neuquén, Argentina',
+        location: 'Santiago, Chile',
         locationLabel: 'Localização',
         focusLabel: 'Atualmente focado em',
     },

@@ -80,7 +80,7 @@ return (
                 {/* {locale === 'es' ? 'Localización' : 'Location'} */}
                 {localeSwitch[locale].location}
               </h5>
-              <p>Neuquén </p>
+              <p>Santiago de Chile </p>
             </div>
             <div class={styles.logoContainer}>
               <img class={styles.logo} src='../logos/focusLogo.png' />

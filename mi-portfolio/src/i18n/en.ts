@@ -11,7 +11,7 @@ export default {
         available: 'Available for work',
         intro: 'Web Developer graduated in 2025, I built projects across diverse stacks and purposes, driven by a constant curiosity to learn new tools, languages and technologies that, once implemented, result in fully integrated products.',
         focus: 'Strengthening my knowledge in process automation',
-        location: 'Neuquén, Argentina',
+        location: 'Santiago, Chile',
         locationLabel: 'Location',
         focusLabel: 'Currently focused on',
     },

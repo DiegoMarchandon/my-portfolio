@@ -11,7 +11,7 @@ export default {
         available: 'Disponible para trabajar',
         intro: 'Desarrollador Web recibido en 2025, realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante curiosidad de conocer nuevas herramientas, lenguajes y tecnologías que, una vez implementadas, terminan culminando en proyectos totalmente integrales.',
         focus: 'Reforzar mis conocimientos sobre automatización de procesos',
-        location: 'Neuquén',
+        location: 'Santiago, Chile',
         locationLabel: 'Localización',
         focusLabel: 'Enfocado en',
     },
