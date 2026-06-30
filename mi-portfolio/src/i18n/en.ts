@@ -9,7 +9,7 @@ export default {
         role: 'Junior Full-stack Developer',
         slogan: 'Commitment at every stage of development',
         available: 'Available for work',
-        intro: 'Web Developer graduated in 2025, I built projects across diverse stacks and purposes, driven by a constant curiosity to learn new tools, languages and technologies that, once implemented, result in fully integrated products.',
+        intro: 'Web developer since 2025, with experience building projects using various tech stacks and for different purposes. I’m driven by a curiosity to understand how code works from the inside out: from the architecture of a REST API to the decisions that make a system maintainable and scalable. I apply principles such as SOLID and best practices in software design both in new projects and when reading and understanding existing code.',
         focus: 'Strengthening my knowledge in process automation',
         location: 'Santiago, Chile',
         locationLabel: 'Location',
@@ -75,7 +75,7 @@ export default {
             {
                 title: 'Current focus',
                 year: '2025 →',
-                body: 'I currently apply well-established software design principles—such as KISS, YAGNI, SSOT, and SOLID—to my projects, and I’ve incorporated Docker and PHPUnit testing into my workflow. I focus on proven practices and technologies and on understanding the legacy code structures that are common in many companies. Because integrating smoothly into an existing team is just as important as writing new code.',
+                body: 'I currently build REST APIs using Node.js, Express, and PostgreSQL by applying a layered architecture (Routes → Controller → Service → Repository) and SOLID principles. I use Docker to package and deploy my projects, and I use Git Flow as my workflow in all my repositories. I’m interested in integrating well into existing teams: understanding existing code is just as important as writing new code.',
             },
         ],
         certificationsTitle: 'Certifications',

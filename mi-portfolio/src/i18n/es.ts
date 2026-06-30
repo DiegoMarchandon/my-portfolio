@@ -9,7 +9,7 @@ export default {
         role: 'Junior Full-stack developer',
         slogan: 'Compromiso en cada etapa del desarrollo',
         available: 'Disponible para trabajar',
-        intro: 'Desarrollador Web recibido en 2025, realicé proyectos conformados por diversos stacks y propósitos, impulsado por la constante curiosidad de conocer nuevas herramientas, lenguajes y tecnologías que, una vez implementadas, terminan culminando en proyectos totalmente integrales.',
+        intro: 'Desarrollador Web recibido en 2025, con experiencia construyendo proyectos de distintos stacks y propósitos. Me mueve la curiosidad por entender cómo funciona el código por dentro: desde la arquitectura de una API REST hasta las decisiones que hacen que un sistema sea mantenible y escalable. Aplico principios como SOLID y buenas prácticas de diseño de software tanto en proyectos nuevos como al leer y entender código existente.',
         focus: 'Reforzar mis conocimientos sobre automatización de procesos',
         location: 'Santiago, Chile',
         locationLabel: 'Localización',
@@ -22,7 +22,7 @@ export default {
             {
                 title: 'Stack Principal',
                 description: 'Incluye tecnologías con las que más me acostumbré a trabajar.',
-                technologies: ['JavaScript/Typescript','React + Next.js','Tailwind CSS','Supabase (PostgreSQL)','Vercel/Render'],
+                technologies: ['JavaScript/Typescript','React + Next.js','Tailwind CSS','Node.js + Express','Supabase (PostgreSQL)','Vercel/Render'],
             },
             {
                 title: 'Frontend & Render',
@@ -32,7 +32,7 @@ export default {
             {
                 title: 'Backend, APIs & Data',
                 description: 'Incluye todo lo relacionado a la lógica del servidor, datos y APIs.',
-                technologies: ['PHP','Laravel','EloquentORM','Cheerio.js','API Routes (Next.js)'],
+                technologies: ['Node.js + Express','REST APIs (diseño y consumo)','PostgreSQL (SQL Puro + consultas relacionales)','PHP + Laravel','API Routes (Next.js)'],
             },
             {
                 title: 'Despliegue, Infraestructura & Flujo de Trabajo',
@@ -75,7 +75,7 @@ export default {
             {
                 title: 'Mi foco actualmente',
                 year: '2025 →',
-                body: 'Actualmente estoy aplicando principios de diseño de software reconocidos, como KISS, YAGNI, SSOT y SOLID en mis proyectos, además de incorporar Docker y testing con PHPUnit a mi flujo de trabajo. Tengo foco en prácticas y tecnologías consolidadas y en entender la estructura de código legacy que predomina en muchas empresas. \nPorque integrarse bien a un equipo existente es tan importante como escribir código nuevo.',
+                body: 'Actualmente construyo APIs REST con Node.js, Express y PostgreSQL aplicando arquitectura en capas (Routes → Controller → Service → Repository) y principios SOLID. Trabajo con Docker para empaquetar y desplegar mis proyectos, y uso Git Flow como flujo de trabajo en todos mis repositorios. Me interesa integrarme bien a equipos existentes: entender el código que ya está escrito es tan importante como escribir código nuevo.',
             },
         ],
         certificationsTitle: 'Certificaciones',

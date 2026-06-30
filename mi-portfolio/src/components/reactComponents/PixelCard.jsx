@@ -35,9 +35,9 @@ export default function PixelCard({locale = 'es'}){
     };
 
     const localeSwitch = {
-      es: {location: 'Localización',focusOn: 'Enfocado en',purpose: 'Incorporar Docker y testing con PHPUnit'},
-      en: {location: 'Location',focusOn: 'Currently focused on',purpose: 'Incorporating Docker and testing with PHPUnit'},
-      pt: {location: 'Localização',focusOn: 'Focado em',purpose: 'Incorporar o Docker e testes com o PHPUnit'},
+      es: {location: 'Localización',focusOn: 'Enfocado en',purpose: 'Arquitectura en capas con Node.js + TypeScript y principios SOLID aplicados'},
+      en: {location: 'Location',focusOn: 'Currently focused on',purpose: 'Layered Architecture with Node.js + TypeScript and Applied SOLID Principles'},
+      pt: {location: 'Localização',focusOn: 'Focado em',purpose: 'Arquitetura em camadas com Node.js + TypeScript e princípios SOLID aplicados'},
       
     }
 

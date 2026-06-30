@@ -9,7 +9,7 @@ export default {
         role: 'Desenvolvedor Full Stack Júnior',
         slogan: 'Compromisso em cada etapa do desenvolvimento',
         available: 'Disponível para oportunidades profissionais',
-        intro: 'Desenvolvedor web formado em 2025, desenvolvi projetos com diferentes conjuntos de tecnologias e finalidades, movido por uma curiosidade constante para aprender novas ferramentas, linguagens e tecnologias que, quando aplicadas, resultam em produtos completamente integrados.',
+        intro: 'Desenvolvedor Web formado em 2025, com experiência na criação de projetos com diferentes pilhas de tecnologia e finalidades. O que me motiva é a curiosidade de entender como o código funciona por dentro: desde a arquitetura de uma API REST até as decisões que tornam um sistema manutável e escalável. Aplico princípios como SOLID e boas práticas de design de software tanto em projetos novos quanto ao ler e entender código existente.',
         focus: 'Aprimorando meus conhecimentos em automação de processos',
         location: 'Santiago, Chile',
         locationLabel: 'Localização',
@@ -75,7 +75,7 @@ export default {
             {
                 title: 'Foco atual',
                 year: '2025 →',
-                body: 'Atualmente, estou aplicando princípios reconhecidos de design de software, como KISS, YAGNI, SSOT e SOLID, nos meus projetos, além de incorporar o Docker e testes com o PHPUnit ao meu fluxo de trabalho. Meu foco está em práticas e tecnologias consolidadas e em compreender a estrutura do código legado que predomina em muitas empresas. Porque integrar-se bem a uma equipe já existente é tão importante quanto escrever código novo.',
+                body: 'Atualmente, desenvolvo APIs REST com Node.js, Express e PostgreSQL aplicando arquitetura em camadas (Routes → Controller → Service → Repositório) e os princípios SOLID. Trabalho com o Docker para empacotar e implantar meus projetos, e uso o Git Flow como fluxo de trabalho em todos os meus repositórios. Tenho interesse em me integrar bem a equipes já existentes: entender o código já escrito é tão importante quanto escrever código novo.',
             },
         ],
         certificationsTitle: 'Certificações',
